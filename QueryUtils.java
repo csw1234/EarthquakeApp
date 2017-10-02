@@ -49,6 +49,13 @@ public final class QueryUtils {
      * parsing a JSON response.
      */
     public static List<Earthquake> extractEarthquakes(String requestUrl) {
+        try{
+            Thread.sleep(2000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        Log.e("extractEarthquakes", "extractEarthquakes-QueryUtils");
+
         URL url = createUrl(requestUrl);
         String jsonResponse = null;
         if (TextUtils.isEmpty(requestUrl)){

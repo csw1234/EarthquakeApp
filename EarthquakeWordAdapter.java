@@ -13,6 +13,8 @@ import java.lang.String;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import android.graphics.drawable.GradientDrawable;
 
 /**
@@ -20,6 +22,8 @@ import android.graphics.drawable.GradientDrawable;
  */
 
 public class EarthquakeWordAdapter extends ArrayAdapter<Earthquake> {
+    private  ArrayList<Earthquake> mWords;
+
     public EarthquakeWordAdapter(Context context, ArrayList<Earthquake> words){
         super(context,0, words);
     }
@@ -112,6 +116,9 @@ public class EarthquakeWordAdapter extends ArrayAdapter<Earthquake> {
 
 
         return ContextCompat.getColor(getContext(),color);
+    }
+    public void setEmployees(List<Earthquake> data){
+
     }
 
 }
